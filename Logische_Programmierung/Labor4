@@ -1,0 +1,6 @@
+3.Schreiben Sie ein Prolog-Programm, das das K-Element der Liste zuruck gibt.
+k_element([X|_],1,X).
+k_element([_|Rest],K,X):-
+    	K>1,
+    	K1 is K-1,
+    	k_element(Rest,K1,X).
