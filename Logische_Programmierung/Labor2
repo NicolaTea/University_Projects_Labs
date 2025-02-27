@@ -1,0 +1,111 @@
+Aufgabe1
+hungrig(lena).
+mutter_von(lena,otto).
+mag(lena,X):-schoko_schenken(X,lena).
+mag(lena,X):-singen(X),kochen(X).
+mag(lena,X):-schoko_schenken(X,lena);kekse_schenken(X,lena).
+sterblich(X):-menschen(X).
+sterblich(sokrates).
+tochter(X,Y):-weiblich(X),kind(X,Y).
+mag_wurst(X):-hund(X).
+mag(pluto,X):-gibt_pluto(mikey,X).
+------------------------------------------------
+Aufgabe2
+mutter(molly_prewett,ron_weasley).
+mutter(molly_prewett,ginny_weasley).
+mutter(hermione_granger,rose_weasley).
+mutter(hermione_granger,hugo_weasley).
+mutter(ginny_weasley,james_sirius_potter).
+mutter(ginny_weasley,albus_severus_potter).
+mutter(ginny_weasley,lily_luna_potter).
+
+
+vater(arthur_weasley,ron_weasley).
+vater(arthur_weaslet,ginny_weasley).
+vater(ron_weasley,rose_weasley).
+vater(ron_weasley,hugo_weasley).
+vater(harry_potter,james_sirius_potter).
+vater(harry_potter,albus_severus_potter).
+vater(harry_potter,lily_luna_potter).
+
+tochter(ginny_weasley,molly_prewett).
+tochter(ginny_weasley, arthur_weasley).
+tochter(lily_luna_potter,ginny_weasley).
+tochter(lily_luna_potter, harry_potter).
+tochter(rose_weasley,hermione_granger).
+tochter(rose_weasley, ron_weasley).
+
+
+sohn(ron_weasley,molly_prewett).
+sohn(ron_weasley,arthur_weasley).
+sohn(hugo_weasley,ron_weasley).
+sohn(hugo_weasley,hermione_weasley).
+sohn(james_sirius_potter,harry_potter).
+sohn(james_sirius_potter,ginny_weasley).
+sohn(albus_severus_potter,harry_potter).
+sohn(albus_severus_potter,ginny_weasley).
+
+
+schwester(ginny_weasley,ron_weasley).
+schwester(rose_weasley,hugo_weasley).
+schwester(lily_luna_potter,james_sirius_potter).
+schwester(lily_luna_potter,albus_severus_potter).
+
+bruder(ron_weasley,ginny_weasley).
+bruder(hugo_weasley,rose_weasley).
+bruder(james_sirius_potter,albus_severus_potter).
+bruder(james_sirius_potter,lily_luna_potter).
+bruder(albus_severus_potter,james_sirius_potter).
+bruder(albus_severus_potter,lily_luna_potter).
+
+grossvater(X,Y):-vater(X,Z),vater(Z,Y).
+grossvater(X,Y):-vater(X,Z),mutter(Z,Y).
+------------------------------------------------
+Aufgabe3
+1.atom
+2.variable
+3.atom
+4.variable
+5.atom
+6.atom
+7.andere
+8.atom
+9.variable
+10.atom
+------------------------------------------------
+Aufgabe4
+1.komplexe Terme 
+Stelligkeit: 2
+functor: loves
+2.atom
+3.variable
+4. komplexe Terme 
+Stelligkeit: 1 
+functor: boxer
+5. komplexe Terme 
+Stelligkeit: 2
+functor: and
+6. komplexe Terme 
+Stelligkeit: 2
+functor: and
+7.variable
+8.andere
+9.andere
+10.andere
+------------------------------------------------
+Aufgabe5
+1. fakt
+2. fakt
+3. fakt
+4. regel
+regelkopf: person(X)
+regelkorper: man(X);woman(X)
+5. regel
+regelkopf: loves(X,Y)
+regelkorper: father(X,Y)
+6. regel
+regelkopf: father(Y,Z)
+regelkorper: man(Y),son(Z,Y)
+7. regel
+regelkopf: father(Y,Z)
+regelkorper: man(Y),daughter(Z,Y)
