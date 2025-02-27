@@ -1,0 +1,78 @@
+Aufgabe1
+connected(1,2).
+connected(3,4).
+connected(5,6).
+connected(7,8).
+connected(9,10).
+connected(12,13).
+connected(13,14).
+connected(15,16).
+connected(17,18).
+connected(19,20).
+connected(4,1).
+connected(6,3).
+connected(4,7).
+connected(6,11).
+connected(14,9).
+connected(11,15).
+connected(16,12).
+connected(14,17).
+connected(16,19).
+
+% Conditia de oprire daca e deja conexiune intre cele doua puncte
+path(X, Y) :- connected(X, Y).
+path(X, Y) :- connected(X, Z), path(Z, Y)
+
+%path(5,10) true
+%path(1,X) X=2
+%path(13,X) X=14,X=9,X=17,X=10,X=18
+#------------------------------------------
+Aufgabe2
+byCar(auckland,hamilton).
+byCar(hamilton,raglan).
+byCar(valmont,saarbruecken).
+byCar(valmont,metz).
+byTrain(metz,frankfurt).
+byTrain(saarbruecken,frankfurt).
+byTrain(metz,paris).
+byTrain(saarbruecken,paris).
+byPlane(frankfurt,bangkok).
+byPlane(frankfurt,singapore).
+byPlane(paris,losAngeles).
+byPlane(bangkok,auckland).
+byPlane(singapore,auckland).
+byPlane(losAngeles,auckland).
+
+travel(X, Y) :- byCar(X, Y).
+travel(X, Y) :- byTrain(X, Y).
+travel(X, Y) :- byPlane(X, Y).
+travel(X, Y) :- (byCar(X, Z); byTrain(X, Z); byPlane(X, Z)), travel(Z, Y).
+#------------------------------------------
+Aufgabe3
+et(albert,kevin).
+et(lena,albert).
+et(marie,lena).
+
+% al 3-lea vorfahr este gresit deoarece se dubleaza verificarea unei bucle
+vorfahr(X,Y) et(X,Y).
+vorfahr(X,Y) vorfahr (X,Z), vorfahr (Z,Y).
+
+% definitia corecta
+vorfahr(X, Y) :- et(X, Y).
+vorfahr(X, Y) :- et(X, Z), vorfahr(Z, Y).
+#-------------------------------------------
+Aufgabe4
+directlyin(irina,natasha).
+directlyin(natasha,olga).
+directlyin(olga,katarina).
+in(X,Y):-directlyin(X,Y).
+in(X,Y):-directlyin(X,Z),in(Z,Y).
+#--------------------------------------------
+Aufgabe5
+countdown(0):-write(0).
+countdown(N) :- N > 0, write(N), nl, N1 is N - 1, countdown(N1).
+#--------------------------------------------
+Aufgabe6
+compare(X,Y):-
+    X >= Y, write("X ist grosser oder egal"), nl;
+    X < Y, write("X ist kleiner"), nl.
