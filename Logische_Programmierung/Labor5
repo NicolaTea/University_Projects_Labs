@@ -1,0 +1,12 @@
+2. Schreiben Sie ein Prolog-Programm, das die Vereinigung der zwei Menge zuruck gibt.
+
+%Fall 1: erste Liste ist eine leere Liste
+vereinige([], M, M).
+%Fall 2: ersten Element von der erste Liste ist nicht in der zweite Liste
+vereinige([H|T], M, [H|Vereinigung]) :-
+    not(member(H, M)),        
+    vereinige(T, M, Vereinigung).
+%Fall 3:ersten Element von der erste Liste ist in der zweite Liste
+vereinige([H|T], M, Vereinigung) :-
+    member(H, M),             
+    vereinige(T, M, Vereinigung).
