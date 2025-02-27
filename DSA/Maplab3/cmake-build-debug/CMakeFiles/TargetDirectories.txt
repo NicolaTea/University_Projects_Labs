@@ -1,0 +1,4 @@
+C:/Users/Admin/CLionProjects/DSA/Maplab3/cmake-build-debug/CMakeFiles/Maplab3.dir
+C:/Users/Admin/CLionProjects/DSA/Maplab3/cmake-build-debug/CMakeFiles/testing.dir
+C:/Users/Admin/CLionProjects/DSA/Maplab3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Admin/CLionProjects/DSA/Maplab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
