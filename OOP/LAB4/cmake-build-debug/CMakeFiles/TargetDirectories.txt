@@ -1,0 +1,4 @@
+C:/Users/Admin/CLionProjects/OOPLAB/LAB4/cmake-build-debug/CMakeFiles/LAB4.dir
+C:/Users/Admin/CLionProjects/OOPLAB/LAB4/cmake-build-debug/CMakeFiles/Tests.dir
+C:/Users/Admin/CLionProjects/OOPLAB/LAB4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Admin/CLionProjects/OOPLAB/LAB4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
