@@ -1,0 +1,11 @@
+import numpy as np
+a = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+print(a)
+b=np.arange(2,10,2)
+print(b)
+c=np.arange(0,6,1)
+print(c)
+d=np.linspace(0,6,num=7)
+print(d)
+e=np.linspace(0,0.6,num=7)
+print(e)
